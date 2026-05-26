@@ -25,7 +25,7 @@
 
     .container {
       display: flex;
-      max-width: 850px;
+      max-width: 900px;
       margin: 45px auto;
     }
 
@@ -50,23 +50,40 @@
     }
 
     .intro {
-      margin-top: 45px;
-      max-width: 500px;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-top: 35px;
       font-size: 17px;
       line-height: 1.35;
     }
 
-    .intro strong {
+    .photo-holder {
+      width: 230px;
+      height: 260px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-size: 16px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .info strong {
       font-size: 18px;
     }
 
-    .intro ul {
+    .info ul {
       list-style-type: disc;
       padding-left: 18px;
       margin-top: 4px;
     }
 
-    .intro li {
+    .info li {
       margin-bottom: 3px;
     }
 
@@ -74,13 +91,15 @@
       font-size: 24px;
       font-weight: normal;
       font-style: italic;
-      margin-top: 65px;
+      margin-top: 55px;
       border-bottom: 1px solid #ccc;
       padding-bottom: 5px;
     }
 
     .section-content {
-      min-height: 100px;
+      font-size: 16px;
+      line-height: 1.5;
+      max-width: 650px;
     }
 
     @media (max-width: 700px) {
@@ -99,6 +118,16 @@
       .main {
         padding-left: 0;
       }
+
+      .intro {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .photo-holder {
+        width: 220px;
+        height: 250px;
+      }
     }
   </style>
 </head>
@@ -114,16 +143,32 @@
       <h1>Qiuyu Fan</h1>
 
       <section id="home" class="intro">
-        <strong>Qiuyu Fan</strong>
-        <ul>
-          <li>First Year PhD Student</li>
-          <li>Department of Computational Applied Mathematics and Operations Research</li>
-          <li>Rice University, Houston, Texas</li>
-          <li>Email:qf3@rice.edu</li>
-          <li><a href="#">[CV]</a></li>
-        </ul>
+        <div class="photo-holder">
+          Photo
+        </div>
+
+        <div class="info">
+          <strong>Qiuyu Fan</strong>
+          <ul>
+            <li>First-Year PhD Student</li>
+            <li>Advisor: Shuvomoy Das Gupta</li>
+            <li>Department of Computational Applied Mathematics and Operations Research</li>
+            <li>Rice University, Houston, Texas</li>
+            <li>Email: qf3@rice.edu</li>
+            <li><a href="#">[CV]</a></li>
+          </ul>
+        </div>
       </section>
 
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="section-content">
+          <p>
+            I am a first-year PhD student in the Department of Computational Applied Mathematics
+            and Operations Research at Rice University. My research interests lie in optimization, algorithms, and applications in transportation and energy systems.
+          </p>
+        </div>
+      </section>
 
     </main>
 
