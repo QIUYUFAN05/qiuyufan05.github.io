@@ -1,43 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      line-height: 1.6;
-      color: #222;
-    }
-
-    header {
-      margin-bottom: 48px;
-    }
-
-    h1 {
-      font-size: 48px;
-      margin-bottom: 8px;
-    }
-
-    h2 {
-      margin-top: 40px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 8px;
-    }
-
-    .project {
-      margin-bottom: 28px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 12px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: white;
+      color: black;
+      font-size: 22px;
     }
 
     a {
-      color: #0366d6;
+      color: #3157ff;
       text-decoration: none;
     }
 
@@ -45,72 +23,218 @@
       text-decoration: underline;
     }
 
-    footer {
+    .container {
+      display: flex;
+      max-width: 1300px;
+      margin: 40px auto;
+    }
+
+    .sidebar {
+      width: 220px;
+      padding-top: 70px;
+      text-align: center;
+      font-size: 24px;
+      line-height: 2.2;
+    }
+
+    .sidebar a {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .main {
+      flex: 1;
+      padding: 0 40px;
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: normal;
+      margin-bottom: 10px;
+      border-bottom: 3px double #ccc;
+      padding-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: normal;
+      font-style: italic;
       margin-top: 60px;
-      color: #666;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+    }
+
+    .intro {
+      display: flex;
+      align-items: center;
+      margin-top: 40px;
+      gap: 40px;
+    }
+
+    .photo-placeholder {
+      width: 430px;
+      height: 420px;
+      border-radius: 12px;
+      border: 2px solid #ddd;
+      background-color: #f7f7f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-size: 22px;
+    }
+
+    .info {
+      font-size: 26px;
+      line-height: 1.4;
+    }
+
+    .info strong {
+      font-weight: bold;
+    }
+
+    .info ul {
+      list-style-type: disc;
+      padding-left: 25px;
+    }
+
+    .info li {
+      margin-bottom: 6px;
+    }
+
+    .social-links {
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      border: 1px solid #3157ff;
+      padding: 5px 10px;
+      margin-right: 6px;
+      font-size: 20px;
+    }
+
+    .section-content {
+      min-height: 100px;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        margin: 20px;
+      }
+
+      .sidebar {
+        width: 100%;
+        padding-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      .sidebar a {
+        display: inline-block;
+        margin: 0 12px 12px 0;
+      }
+
+      .main {
+        padding: 0;
+      }
+
+      .intro {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .photo-placeholder {
+        width: 100%;
+        height: 260px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>Student / Developer / Designer / Researcher</p>
-    <p>
-      <a href="mailto:your.email@example.com">Email</a> ·
-      <a href="https://github.com/yourusername">GitHub</a> ·
-      <a href="https://www.linkedin.com/in/yourusername">LinkedIn</a>
-    </p>
-  </header>
+  <div class="container">
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      Write a short introduction about who you are, what you study or work on,
-      and what kinds of projects you enjoy building.
-    </p>
-  </section>
+    <nav class="sidebar">
+      <a href="#home">Home</a>
+      <a href="#papers">Papers</a>
+      <a href="#grants">Grants & Awards</a>
+      <a href="#talks">Talks</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#blog">Blog</a>
+    </nav>
 
-  <section>
-    <h2>Projects</h2>
+    <main class="main">
+      <h1>Your Name</h1>
 
-    <div class="project">
-      <h3>Project One</h3>
-      <p>
-        Briefly describe the project, what problem it solves, and what tools you used.
-      </p>
-      <p>
-        <a href="#">Live Demo</a> ·
-        <a href="#">GitHub Repo</a>
-      </p>
-    </div>
+      <section id="home" class="intro">
+        <div class="photo-placeholder">
+          Photo Placeholder
+        </div>
 
-    <div class="project">
-      <h3>Project Two</h3>
-      <p>
-        Briefly describe another project. Mention your role and the outcome.
-      </p>
-      <p>
-        <a href="#">Live Demo</a> ·
-        <a href="#">GitHub Repo</a>
-      </p>
-    </div>
-  </section>
+        <div class="info">
+          <strong>Your Name</strong>
+          <ul>
+            <li>Title / Position</li>
+            <li>Department / Program</li>
+            <li>University / Institution</li>
+            <li>Email:</li>
+            <li><a href="#">[CV]</a></li>
+          </ul>
 
-  <section>
-    <h2>Skills</h2>
-    <p>Python, JavaScript, HTML, CSS, React, Git, Data Analysis</p>
-  </section>
+          <div class="social-links">
+            <a href="#">Google Scholar</a>
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>
-      I’m open to opportunities, collaborations, and research projects.
-      Reach me at <a href="mailto:your.email@example.com">your.email@example.com</a>.
-    </p>
-  </section>
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="section-content">
+          <p></p>
+        </div>
+      </section>
 
-  <footer>
-    <p>© 2026 Your Name</p>
-  </footer>
+      <section id="papers">
+        <h2>Papers</h2>
+        <div class="section-content">
+          <p></p>
+        </div>
+      </section>
+
+      <section id="grants">
+        <h2>Grants & Awards</h2>
+        <div class="section-content">
+          <p></p>
+        </div>
+      </section>
+
+      <section id="talks">
+        <h2>Talks</h2>
+        <div class="section-content">
+          <p></p>
+        </div>
+      </section>
+
+      <section id="teaching">
+        <h2>Teaching</h2>
+        <div class="section-content">
+          <p></p>
+        </div>
+      </section>
+
+      <section id="blog">
+        <h2>Blog</h2>
+        <div class="section-content">
+          <p></p>
+        </div>
+      </section>
+    </main>
+
+  </div>
 </body>
 </html>
